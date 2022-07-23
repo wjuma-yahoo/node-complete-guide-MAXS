@@ -3,16 +3,26 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "gulp:dev": "gulp dev",
+    "start": "concurrently \" npm run gulp:dev \" \" npm run dev \" "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "concurrently": "^7.3.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "errorhandler": "^1.5.1",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "nodemon": "^2.0.19",
+    "sass": "^1.53.0"
   },
   "description": ""
 }
