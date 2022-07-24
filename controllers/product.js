@@ -1,3 +1,5 @@
+const Product = require('../model/product');
+
 exports.getAddProduct = (req, res) => {
 	res.render('add-product', {
 		pageTitle: 'Add product',
@@ -6,5 +8,9 @@ exports.getAddProduct = (req, res) => {
 }
 
 exports.postAddProduct = (req, res) => {
+	const { title } = req.body;
+	const product = new Product(title);
+	product.save();
+	// console.log(req.body);
 	res.redirect('/');
 }

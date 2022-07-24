@@ -18,7 +18,19 @@
 		<h1><%= pageTitle %></h1>
 
 		<section>
-			
+			<!-- <h3>Crear un producto</h3> -->
+			<div class="ui grid">
+				<form class="ui form six wide column" action="/admin/product" method="post">
+					<div class="field">
+						<label for="title">Title</label>
+						<input name="title" type="text">
+					</div>
+					<button 
+						type="submit" 
+						class="ui primary button"
+					>Add product</button>
+				</form>
+			</div>
 		</section>
 		
 	</main>

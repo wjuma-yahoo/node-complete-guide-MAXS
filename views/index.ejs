@@ -19,24 +19,31 @@
 
 		<h1><%= pageTitle %></h1>
 
-		<section>
+		<% if ( products.length > 0 ) { %>
+			<section class="ui grid">
 
-			<div class="ui card">
-
-				<a href="#" class="image">
-					<img src="https://m.media-amazon.com/images/I/51OoeQrDhZL._AC_SX425_.jpg" alt="">
-				</a>
-
-				<div class="content">
-					<a href="#" class="header">IPCW CWT-732B2 Honda Civic 4 puertas Bermudas negro lámpara trasera con ojos de cristal - 3 piezas</a>
-					<div class="meta">
-						<p>Las luces traseras Euro le dan a tu coche un aspecto muy personalizado</p>
+				<% products.map(product => { %>
+					<div class="ui card">
+						<a href="#" class="image">
+							<img src="https://m.media-amazon.com/images/I/51OoeQrDhZL._AC_SX425_.jpg" alt="">
+						</a>
+						<div class="content">
+							<a href="#" class="header">IPCW CWT-732B2 Honda Civic 4 puertas Bermudas negro lámpara trasera con ojos de cristal - 3 piezas</a>
+							<div class="meta">
+								<p>Las luces traseras Euro le dan a tu coche un aspecto muy personalizado</p>
+							</div>
+						</div>
 					</div>
-				</div>
+				<% }) %>
 				
-			</div>
-			
-		</section>
+			</section>
+		<% } else { %>
+			<section>
+
+				<h1>No hay productos</h1>
+
+			</section>
+		<% } %>
 		
 	</main>
 
