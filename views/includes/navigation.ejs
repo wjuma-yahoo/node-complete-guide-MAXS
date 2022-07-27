@@ -1,12 +1,12 @@
 <div class="ui inverted segment">
   <div class="ui inverted secondary pointing menu">
-    <a class="item" href="/shop">
+    <a class="<%= path === '/shop' ? 'item active' : 'item' %>" href="/shop">
       Shop
     </a>
     <a class="item" href="/products">
       Products
     </a>
-    <a class="item" href="/admin/add-product">
+    <a class="<%= path === '/add-product' ? 'item active' : 'item' %>" href="/admin/add-product">
       Add product
     </a>
   </div>

@@ -3,7 +3,7 @@ const Product = require('../model/product');
 exports.getProducts = (req, res) => {
 
 	Product.fetchAll( products =>  {
-		res.render('index', {
+		res.render('shop/product-list', {
 			pageTitle: 'Product List',
 			path: '/',
 			products
@@ -13,8 +13,11 @@ exports.getProducts = (req, res) => {
 
 exports.getShop = (req, res) => {
 
-	res.render('shop', {
-		pageTitle: 'Shop',
-		path: '/shop'
+	Product.fetchAll( products =>  {
+		res.render('shop/index', {
+			pageTitle: 'Shop',
+			path: '/shop',
+			products
+		});
 	});
 }
